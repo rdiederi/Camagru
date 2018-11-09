@@ -40,7 +40,6 @@ $montages = get_all_montage();
 					<input type="file" id="take-picture" style="display:none;" accept="image/*">
 				</div>
 				<div class="side">
-			<div class="Montages">Montages</div>
 			<div id="miniatures">
 			<div class="miniatures_c">
 				<?php

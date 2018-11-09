@@ -1,11 +1,12 @@
 body {
 	background: url(/Camagru/img/Gallery_Back_2.png);
-	/* background-color: #0000007a; */
+	background-color: #0000007a;
    	background-size: cover;
    	background-position: relative;
 	margin: 0;
 	font-family: monospace;
 }
+
 #header {
 	width: 100%;
 	height: 60px;
@@ -56,6 +57,7 @@ body {
 	margin-right: 5px;
 }
 .nb-like {
+	background-color: #0b0c105b;
 	color: #00da1d;
 	font-size: 14px;
 	margin-right: 5px;
@@ -90,6 +92,7 @@ body {
 		margin-top: 5px;
 }
 .button-like {
+	background-color: #0b0c105b;
 	margin-left: 5px;
 	margin-right: 5px;
 }
