@@ -1,28 +1,38 @@
 <?php
 session_start();
-include_once './functions/verify.php';
+include_once("./functions/verify.php");
 ?>
 <!DOCTYPE html>
 <HTML>
-  <header>
-    <link rel="stylesheet" type="text/css" href="style/index.css">
-    <meta charset="UTF-8">
-    <title>CAMAGRU - VERIFY</title>
-  </header>
-  <body>
-    <?php include('fragments/header.php') ?>
-    <?php include('fragments/footer.php') ?>
-    <div id="login">
-    <div class="title">VERIFY</div>
-    <?php if (verify($_GET["token"]) == 0) { ?>
-      <strong>
-        Your account as been verified
-      </strong>
-    <?php } else { ?>
-      <strong>
-        Account not found
-      </strong>
-    <?php } ?>
-    </div>
-  </body>
+	<header>
+		<link rel="stylesheet" type="text/css" href="style/index.css">
+		<meta charset="UTF-8">
+		<title>CAMAGRU - VERIFY</title>
+	</header>
+	<body>
+		<?php include('fragments/header.php') ?>
+		<div id="v_login">
+		<div class="title">VERIFY</div>
+		<?php if (verify($_GET["token"]) == 0) { ?>
+			<div class="success">
+				Your account as been verified
+				<script>
+						setTimeout(function() {
+  					window.location = "index.php";
+						}, 3000);
+				</script>
+			</div>
+		<?php } else { ?>
+			<div class="error">
+				Account not found
+				<script>
+						setTimeout(function() {
+  					window.location = "signup.php";
+						}, 3000);
+				</script>
+			</div>
+		<?php } ?>
+		</div>
+		<?php include('fragments/footer.php') ?>
+	</body>
 </HTML>

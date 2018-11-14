@@ -15,7 +15,10 @@
 }
 body {
 	margin: 0;
-	background: #0b0c10;
+	background: url(/Camagru_2/img/Background.jpg);
+	background-color: #0000007a;
+   	background-size: cover;
+   	background-position: relative;
 	font-family:  monospace;
 }
 label {
@@ -37,6 +40,21 @@ label {
 	background-color: #1f283300;
 	padding: 5px;
 }
+
+#v_login {
+	border:  solid #66fcf1;
+	position: fixed;
+	top: 35%;
+	bottom: 0;
+	text-align: center;
+	left: 0;
+	right: 0;
+	width: 250px;
+	height: 90px;
+	margin: auto;
+	background-color: #1f283300;
+	padding: 5px;
+}
 .main_head {
 	height: 140px;
 	padding-top: 6%;
@@ -48,6 +66,38 @@ label {
 	text-shadow: 2px 2px 5px #000000;
 	color: #66fcf1;
 }
+
+#header {
+	width: 100%;
+	top: 0%;
+	height: 60px;
+	color: #0b0c10;
+	background-color: #66fcf1;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	margin-bottom: 15px;
+	position: fixed;
+	z-index: 1;
+}
+
+.button {
+	float: right;
+	height: 56px;
+	width: 100px;
+	line-height: 56px;
+	border: 2px solid #66fcf1;
+	color: #0b0c10;
+}
+
+.button:hover {
+	background-color: #0b0c10;
+	color: #66fcf1;
+	border: 2px solid #0b0c10;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
 #blue {
 	align-content: center;
 }
