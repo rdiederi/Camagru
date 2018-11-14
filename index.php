@@ -9,6 +9,7 @@ session_start();
 		<title>CAMAGRU</title>
 	</header>
 	<body>
+	<?php include('fragments/header_2.php') ?>
 		<div class="main_head">CAMAGRU</div>
 		<div id="login">
 			<div class="title">LOGIN</div>

@@ -132,7 +132,7 @@ function onCheckBoxChecked(checkbox) {
 				var data64Img = canvas.toDataURL(image.type);
 				window.URL.revokeObjectURL(file);
 
-				img.src = document.querySelector('input[name="img"]:checked').value; // Set source path
+				img.src = document.querySelector('input[name="img"]:checked').value; /
 				var split = img.src.split("/");
 				var file = split[split.length - 1];
 
@@ -151,7 +151,6 @@ function onCheckBoxChecked(checkbox) {
 		image.src = window.URL.createObjectURL(inputFile.files[0]);
 	}
 }
-
 
 function sendMontage(imgData64, filterImg) {
 	var xhr = new XMLHttpRequest();

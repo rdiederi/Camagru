@@ -14,7 +14,10 @@
 }
 body {
 	margin: 0;
-	background: #0b0c10;
+	background: url(/Camagru/img/Signup.png);
+	background-color: #0000007a;
+   	background-size: cover;
+   	background-position: relative;
 	font-family:  monospace;
 }
 label {
@@ -33,7 +36,7 @@ label {
 	width: 250px;
 	height: 400px;
 	margin: auto;
-	background-color: #1f283300;
+	background-color: #2f2f2f80;
 	padding: 5px;
 }
 .main_head {

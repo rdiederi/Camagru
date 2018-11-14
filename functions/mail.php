@@ -5,7 +5,7 @@ function send_verification_email($toAddr, $toUsername, $token, $ip) {
 
   $headers  = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-  $headers .= 'From: <rdiederi@student.wethinkcode.co.za>' . "\r\n";
+  $headers .= 'From: <team@camagru.com>' . "\r\n";
 
   $message = '
   <html>
@@ -28,7 +28,7 @@ function send_forget_mail($toAddr, $toUsername, $password) {
 
   $headers  = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-  $headers .= 'From: <rdiederi@student.wethinkcode.co.za>' . "\r\n";
+  $headers .= 'From: <team@camagru.com>' . "\r\n";
 
   $message = '
   <html>
@@ -50,7 +50,7 @@ function send_comment_mail($toAddr, $toUsername, $comment, $fromUsername, $img, 
 
   $headers  = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-  $headers .= 'From: <rdiederi@student.wethinkcode.co.za>' . "\r\n";
+  $headers .= 'From: <team@camagru.com>' . "\r\n";
 
   $message = '
   <html>
