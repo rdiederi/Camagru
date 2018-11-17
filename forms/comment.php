@@ -19,7 +19,7 @@ $userInfos = get_userinfo_from_montage($img);
 $url = $_SERVER['HTTP_HOST'] . str_replace("/forms/comment.php", "", $_SERVER['REQUEST_URI']);
 
 if ($val == 0) {
-  if ($userInfos['username']) {
+  if ($userInfos['username'] && isset($_SESSION['notify'])) {
     send_comment_mail($userInfos['mail'], $userInfos['username'], $comment, $username, $img, $url);
   }
   echo htmlspecialchars($username);

@@ -1,4 +1,4 @@
+AuthUserFile /goinfre/rdiederi/MAMP/apache2/htdocs/Camagru/.htpasswd
 AuthType Basic
-AuthName "Enter Password"
-AuthUserFile /Camagru_2/Config/.htmyp
-require valid-user
+AuthName "Enter Credentials"
+Require valid-user

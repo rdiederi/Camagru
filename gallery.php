@@ -58,13 +58,24 @@ $montages = get_all_montage();
 			</div>
 			</div>
 		</div>
-				<?php } else { ?>
-					You need to connect to use the gallery
-				<?php } ?>
+			<?php } else { ?>
+			<div id="v_login">
+				<div class="msg">
+					<div class="success">
+					You need to login to use the gallery
+						<script>
+							setTimeout(function() {
+  							window.location = "index.php";
+							}, 2000);
+						</script>
+					</div>
+				</div>
 			</div>
-		<?php include('fragments/footer.php') ?>
-	</body>
-	<?php if(isset($_SESSION['id'])) { ?>
+			<?php } ?>
+		</div>
+	<?php include('fragments/footer.php') ?>
+</body>
+<?php if(isset($_SESSION['id'])) { ?>
 	<script type="text/javascript" src="js/webcam.js"></script>
 	<script type="text/javascript" src="js/drop.js"></script>
 	<script type="text/javascript" src="js/import.js"></script>

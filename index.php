@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['notify'] = true;
 ?>
 <!DOCTYPE html>
 <HTML>

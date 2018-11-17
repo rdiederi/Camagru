@@ -43,7 +43,11 @@ navigator.mediaDevices.getUserMedia(constraints)
 .catch(videoError);
 
 function handleVideo(stream) {
-		video.src = window.URL.createObjectURL(stream);
+		try {
+			video.srcObject = stream;
+		  } catch (error) {
+			video.src = window.URL.createObjectURL(stream);
+		}
 		cameraAvailable = true;
 		video.style.display = "block";
 		notAvailable.style.display = "none";
@@ -62,7 +66,7 @@ function handleVideo(stream) {
 					}
 			}, false);
 
-			image.src = document.querySelector('input[name="img"]:checked').value; // Set source path
+			image.src = document.querySelector('input[name="img"]:checked').value;
 			var split = image.src.split("/");
 			var file = split[split.length - 1];
 
@@ -132,7 +136,7 @@ function onCheckBoxChecked(checkbox) {
 				var data64Img = canvas.toDataURL(image.type);
 				window.URL.revokeObjectURL(file);
 
-				img.src = document.querySelector('input[name="img"]:checked').value; /
+				img.src = document.querySelector('input[name="img"]:checked').value;
 				var split = img.src.split("/");
 				var file = split[split.length - 1];
 

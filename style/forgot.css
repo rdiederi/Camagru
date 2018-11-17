@@ -6,6 +6,122 @@
 	height: 300px;
 	font-size: 15px;
 }
+
+.switch {
+	margin-top: 50px;
+ 	position: relative;
+ 	display: inline-block;
+ 	width: 90px;
+	 height: 34px;
+}
+
+.switch input {
+	display:none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ca2222;
+  -webkit-transition: .4s;
+  transition: .4s;
+   border-radius: 34px;
+}
+
+#header {
+	width: 100%;
+	top: 0%;
+	height: 60px;
+	color: #0b0c10;
+	background-color: #66fcf1;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	margin-bottom: 15px;
+	position: fixed;
+	z-index: 1;
+}
+
+.footer {
+	position: fixed;
+	color: #0b0c10;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 18px;
+	width: 100%;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	background-color: #66fcf1;
+}
+
+.button {
+	float: right;
+	height: 56px;
+	width: 100px;
+	line-height: 56px;
+	border: 2px solid #66fcf1;
+	color: #0b0c10;
+}
+
+.button:hover {
+	background-color: #0b0c10;
+	color: #66fcf1;
+	border: 2px solid #0b0c10;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2ab934;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.slider:after
+{
+ content:'OFF';
+ color: white;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 10px;
+ font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after
+{  
+  content:'ON';
+}
+
 .error{
 	color: rgb(255, 0, 0);
 }
@@ -14,7 +130,10 @@
 }
 body {
 	margin: 0;
-	background: #0b0c10;
+	background: url(/Camagru/img/Signup.png);
+	background-color: #0000007a;
+   	background-size: cover;
+   	background-position: relative;
 	font-family:  monospace;
 }
 label {
@@ -33,7 +152,7 @@ label {
 	width: 250px;
 	height: 230px;
 	margin: auto;
-	background-color: #1f283300;
+	background-color: #1f2833c9;
 	padding: 5px;
 }
 .main_head {
@@ -127,13 +246,4 @@ input[type="submit"]:hover {
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
 	color: blue;
-}
-#header {
-	width: 100%;
-	height: 60px;
-	background-color: green;
-	text-align: center;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-	margin-bottom: 150px;
-	z-index: 1;
 }
