@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION['notify'] = false;
 ?>
 <!DOCTYPE html>
 <HTML>
@@ -18,31 +17,18 @@ $_SESSION['notify'] = false;
 				<label>Email Notification: </label>
 				<?php if(isset($_SESSION['notify'])) { ?>
 				<label class="switch" >
-					<input type="checkbox" name="notify" value="yes" checked>
+					<input type="checkbox" name="notify_1" value="yes" checked>
   					<span class="slider round"></span>
 				</label>
 				<?php } else { ?>
 				<label class="switch" >
-					<input type="checkbox" name="notify" id="notify" >
+					<input type="checkbox" name="notify_2" id="notify" >
   					<span class="slider round"></span>
 				</label>
 				<?php } ?>
 				<input name="submit" type="submit" value=" SAVE "><br>
 			</form>
 			</div>
-			<?php if (isset($_SESSION['notify'])) { ?>
-			<div class="success">
-				<?php
-					echo "Notify is set";
-				?>
-			</div>
-			<?php } else { ?>
-			<div class="error">
-				<?php
-					echo "Notify is OFF";
-				?>
-			</div>
-			<?php } ?>
 			</div>
 		</div>
 	<?php include('fragments/footer.php') ?>
